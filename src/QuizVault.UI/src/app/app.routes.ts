@@ -15,4 +15,9 @@ export const routes: Routes = [
     pathMatch: 'prefix',
     loadChildren: () => import('./quiz/quiz.module').then((m) => m.QuizModule),
   },
+  {
+    path: 'teams',
+    pathMatch: 'prefix',
+    loadChildren: () => import('./team/team.module').then((m) => m.TeamModule),
+  },
 ];
