@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
     component: DashboardPageComponent,
   },
 ];
