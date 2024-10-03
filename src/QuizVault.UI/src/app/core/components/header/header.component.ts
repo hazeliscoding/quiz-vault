@@ -1,15 +1,28 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {
+  ClarityIcons,
+  homeIcon,
+  pencilIcon,
+  talkBubblesIcon,
+  trashIcon,
+  userIcon,
+} from '@cds/core/icon';
 import { ClarityModule } from '@clr/angular';
+
+ClarityIcons.addIcons(
+  userIcon,
+  talkBubblesIcon,
+  homeIcon,
+  pencilIcon,
+  trashIcon
+);
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [ClarityModule, RouterModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent {}
