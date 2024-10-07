@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {
+  angleIcon,
   ClarityIcons,
   homeIcon,
   pencilIcon,
@@ -15,7 +16,8 @@ ClarityIcons.addIcons(
   talkBubblesIcon,
   homeIcon,
   pencilIcon,
-  trashIcon
+  trashIcon,
+  angleIcon
 );
 
 @Component({

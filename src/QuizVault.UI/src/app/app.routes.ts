@@ -25,4 +25,14 @@ export const routes: Routes = [
     pathMatch: 'prefix',
     loadChildren: () => import('./core/core.module').then((m) => m.CoreModule),
   },
+  {
+    path: 'serach',
+    pathMatch: 'prefix',
+    loadChildren: () => import('./core/core.module').then((m) => m.CoreModule),
+  },
+  {
+    path: 'users',
+    pathMatch: 'prefix',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+  }
 ];
