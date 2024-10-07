@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 import {
   angleIcon,
   ClarityIcons,
@@ -23,8 +24,18 @@ ClarityIcons.addIcons(
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ClarityModule, RouterModule],
+  imports: [ClarityModule, RouterModule, FormsModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  public searchTerm = '';
+
+  constructor(private router: Router) {}
+
+  onSearch() {
+    this.router.navigate(['/search'], {
+      queryParams: { search: this.searchTerm },
+    });
+  }
+}

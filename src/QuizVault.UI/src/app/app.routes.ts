@@ -26,7 +26,7 @@ export const routes: Routes = [
     loadChildren: () => import('./core/core.module').then((m) => m.CoreModule),
   },
   {
-    path: 'serach',
+    path: 'search',
     pathMatch: 'prefix',
     loadChildren: () => import('./core/core.module').then((m) => m.CoreModule),
   },
