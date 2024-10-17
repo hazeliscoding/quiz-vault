@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="left">Quiz ID</th>
+        <th class="left">Name</th>
+        <th class="left">Description</th>
+        <th class="left">Question</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="selectable"
+        *ngFor="let quiz of quizzes"
+        [routerLink]="'/quizzes' + quiz.id"
+      >
+        <td class="left">{{ quiz.id }}</td>
+        <td class="left">{{ quiz.title }}</td>
+        <td class="left">{{ quiz.description }}</td>
+        <td class="left">{{ quiz.questions.length }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
