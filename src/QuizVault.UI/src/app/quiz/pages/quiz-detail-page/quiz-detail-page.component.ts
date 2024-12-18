@@ -3,6 +3,7 @@ import { ClarityModule } from '@clr/angular';
 import { QuestionListComponent } from '../../components/question-list/question-list.component';
 import { QuizAttemptListComponent } from '../../components/quiz-attempt-list/quiz-attempt-list.component';
 import { DatePipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quiz-detail-page',
@@ -11,7 +12,7 @@ import { DatePipe } from '@angular/common';
     ClarityModule,
     QuestionListComponent,
     QuizAttemptListComponent,
-    DatePipe
+    DatePipe,
   ],
   templateUrl: './quiz-detail-page.component.html',
   styleUrl: './quiz-detail-page.component.scss',
@@ -34,4 +35,10 @@ export class QuizDetailPageComponent {
       mail: 'Test',
     },
   };
+
+  constructor(private router: Router) {}
+
+  onStartQuiz() {
+    this.router.navigate([this.router.url, 'attempt', 'attemptId']);
+  }
 }
