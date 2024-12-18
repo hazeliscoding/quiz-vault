@@ -12,7 +12,7 @@
       <tr
         class="selectable"
         *ngFor="let quiz of quizzes"
-        [routerLink]="'/quizzes' + quiz.id"
+        [routerLink]="'/quizzes/' + quiz.id"
       >
         <td class="left">{{ quiz.id }}</td>
         <td class="left">{{ quiz.title }}</td>

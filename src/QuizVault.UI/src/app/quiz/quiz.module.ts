@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { QuizListPageComponent } from './pages/quiz-list-page/quiz-list-page.component';
 import { QuizDetailPageComponent } from './pages/quiz-detail-page/quiz-detail-page.component';
+import { ClarityModule } from '@clr/angular';
 
 const routes: Routes = [
   {
@@ -19,6 +20,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes), ClarityModule],
 })
 export class QuizModule {}
